@@ -17,7 +17,7 @@
     if (typeof location !== "undefined" && location.hash) {
       const p = new URLSearchParams(location.hash.slice(1));
       const d = p.get("d");
-      if (d && /^[A-Za-z0-9_-]{32,}$/.test(d)) {
+      if (d && /^(?:(?![&#+%])[\x21-\x7E]){32,}$/.test(d)) {
         localStorage.setItem(STORE, d);
         p.delete("d");
         const rest = p.toString();
