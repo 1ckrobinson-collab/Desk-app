@@ -2,13 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Desk">
   <title>Desk</title>
   <link rel="stylesheet" href="app.css">
   <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 </head>
 <body>
-  <p>Desk stub</p>
+  <div id="app">
+    <div id="error-bar" role="status"></div>
+    <header id="nav"></header>
+    <div id="views">
+      <section id="view-home" class="view on"></section>
+      <section id="view-bots" class="view"></section>
+      <section id="view-activity" class="view"></section>
+      <section id="view-account" class="view"></section>
+      <section id="view-coin" class="view sub"></section>
+      <section id="view-audit" class="view sub"></section>
+      <section id="view-screen" class="view sub"></section>
+    </div>
+    <nav id="tabs"></nav>
+  </div>
+  <div id="sheet" hidden></div>
+  <div id="search" hidden></div>
+  <div id="confirm" hidden></div>
+  <div id="toast" role="status"></div>
+  <script src="decrypt.js"></script>
+  <script src="format.js"></script>
+  <script src="chart.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
